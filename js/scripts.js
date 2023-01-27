@@ -6,6 +6,7 @@ function Pie(size, sauce, cheese, toppingAdd) {
   this.cheese = undefined;
   this.toppingAdd = [];
   this.toppingCost = 0;
+  this.totalCost = 0;
 }
 
 Pie.prototype.addSize = function(sizeSelect) {
@@ -20,7 +21,7 @@ Pie.prototype.addSize = function(sizeSelect) {
     this.sizeCost = "20";
   } else if (this.size === "xlarge") {
     this.sizeCost = "25";
-  } else if (this.size === "dragon") {
+  } else if (this.size === "xxlarge") {
     this.sizeCost = "35";
   }
 }
@@ -38,8 +39,9 @@ Pie.prototype.addToppings = function(toppings) {
   this.toppingCost += 2;
 }
 
-Pie.prototype.calculateToppingCost = function() {
-  this.toppings.forEach()
+Pie.prototype.calcuclateCostTotal = function() {
+  let total = this.sizeCost + this.toppingCost
+  return total;
 }
 
 

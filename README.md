@@ -99,7 +99,7 @@ Code:
 let myPie = new Pie();
 myPie.addSize("dragon");
 myPie.addToppings("dragon");
-myPie.calculateCostTotal();
+myPie.calcuclateCostTotal();
 Expected Output: 37
 
 ## Known Bugs
