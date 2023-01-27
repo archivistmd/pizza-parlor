@@ -1,0 +1,12 @@
+body {
+  background-color: rgba(192, 191, 189, 0.897);
+}
+h1 {
+  text-align: center;
+  color: darkred;
+  font-size: 64px;
+}
+#instructions {
+  font-size: 16px;
+  text-align: center;
+}
