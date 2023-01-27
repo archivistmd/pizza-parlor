@@ -43,26 +43,43 @@ Pie.prototype.calculateTotalCost = function() {
   return total;
 }
 
-
-
 //user logic
 function handleFormSubmission(event) {
   event.preventDefault();
-  let pie = new Pie();
+  const pie = new Pie();
   const size = document.getElementById("size").value;
   const sauce = document.getElementById("sauce").value;
   const cheese = document.getElementById("cheese").value;
-  const toppingAdd = document.querySelectorAll("input[name=toppingAdd]checked");
-  const toppingAddArray = Array.from(toppingAdd);
-
-  toppingAddArray.forEach(function(toppings) {
-    pie.addToppingAdd(toppings);
-  });
   pie.addSize(size);
   pie.addSauce(sauce);
   pie.addCheese(cheese);
-  let total = pie.calculateTotalCost();
-}
+
+  const toppingAdd = document.querySelectorAll("input[name=toppingAdd]:checked");
+  const toppingAddArray = Array.from(toppingAdd);
+  const theToppers = document.createElement("p");
+  toppingAddArray.forEach(function(toppings) {
+    pie.addToppingAdd(toppings);
+    theToppers.append(toppings.value + ". ")
+  });
+
+  const div = document.getElementById("order-check");
+  const displayTotal = document.createElement("h4");
+  const pickedSize = document.createElement("p");
+  const pickedSauced = document.createElement("p");
+  const pickedCheesed = document.createElement("p");
+  const total = pizza.calculateTotalCost();
+  
+  pickedSize.append("Size: " + pie.size);
+  pickedSauced.append("Sauced: " + pie.sauce);
+  pickedCheesed.append("Cheesed: " + pie.cheese)
+  displayTotal.append("This rings you up at: $" + total);
+  div.append(pickedSize);
+  div.append(pickedSauced);
+  div.append(pickedCheesed);
+  div.append(displayTotal);
+  div.removeAttribute("class");
+  document.getElementById("pizza-order").reset();
+  }
 
 window.addEventListener("load", function() {
   documument.querySelector("form#pizza-order").addEventListener("submit", handleFormSubmission);
