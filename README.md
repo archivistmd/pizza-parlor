@@ -29,9 +29,9 @@ Or you may clone the project to your desktop by using the following command:
 * Open the file named index.html with the browser of your choice (i.e. firefox, chrome, ect.)
 
 ## Tests: TDD
-Test: 
-Code: 
-Expected Output: 
+Test: "Should return five properties for size, sauce, topping1, topping2, toppingAdd in the pie object
+Code: const myPie = new Pie("personal","light","bronto","artichoke",["deepmushroom"]); 
+Expected Output: Pie {size: "personal", sauce: "light", toppingw: "bronto", topping2:"artichoke",toppingAdd: ["deepmushroom"]}
 
 ## Known Bugs
 
