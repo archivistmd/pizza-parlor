@@ -29,9 +29,20 @@ Or you may clone the project to your desktop by using the following command:
 * Open the file named index.html with the browser of your choice (i.e. firefox, chrome, ect.)
 
 ## Tests: TDD
+Test 1
 Test: "Should return five properties for size, sauce, topping1, topping2, toppingAdd in the pie object
-Code: const myPie = new Pie("personal","light","bronto","artichoke",["deepmushroom"]); 
-Expected Output: Pie {size: "personal", sauce: "light", toppingw: "bronto", topping2:"artichoke",toppingAdd: ["deepmushroom"]}
+Code:
+const myPie = new Pie("personal","light","bronto","artichoke",["deepmushroom"]); 
+Expected Output: 
+Pie {size: "personal", sauce: "light", toppingw: "bronto", topping2:"artichoke",toppingAdd: ["deepmushroom"]}
+
+Test 2
+Test: "It will add the specified topping in the correct property to the Pie object.
+Code: 
+let myPie = new Pie();
+myPie.addToppings("bronto");
+Expected Output: Pie
+{ size: undefined, sauce: undefined, topping1: undefined, topping2: undefined, toppingAdd: "bronto" }
 
 ## Known Bugs
 

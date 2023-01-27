@@ -7,4 +7,7 @@ function Pie(size, sauce, topping1, topping2, toppingAdd) {
   this.toppingAdd = toppingAdd;
 }
 
+Pie.prototype.addToppings = function(toppings) {
+  this.toppingAdd = toppings;
+}
 //user logic
