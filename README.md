@@ -30,11 +30,11 @@ Or you may clone the project to your desktop by using the following command:
 
 ## Tests: TDD
 Test 1
-Test: "Should return five properties for size, sauce, topping1, topping2, toppingAdd in the pie object
+Test: "Should return five properties for size, sauce, cheese, toppingAdd in the pie object
 Code:
-const myPie = new Pie("personal","light","bronto","artichoke",["deepmushroom"]); 
+const myPie = new Pie("personal","light","ricotta",["deepmushroom"]); 
 Expected Output: 
-Pie {size: "personal", sauce: "light", toppingw: "bronto", topping2:"artichoke",toppingAdd: ["deepmushroom"]}
+Pie {size: "personal", sauce: "light", cheese:"ricotta",toppingAdd: ["deepmushroom"]}
 
 Test 2
 Test: "It will add the specified topping in the correct property to the Pie object.
@@ -42,7 +42,7 @@ Code:
 let myPie = new Pie();
 myPie.addToppings("bronto");
 Expected Output: Pie
-{ size: undefined, sauce: undefined, topping1: undefined, topping2: undefined, toppingAdd: "bronto" }
+{ size: undefined, sauce: undefined, cheese: undefined, toppingAdd: "bronto" }
 
 Test 3
 Test: It will add multiple toppings to the correct property of the Pie object as specified.
@@ -50,7 +50,7 @@ Code:
 let myPie = new Pie();
 myPie.addToppings("bronto", "deepmushroom");
 Expected Output:
-Pie { size: undefined, sauce: undefined, topping1: undefined, topping2: undefined, toppingAdd: ["bronto", "deepmushroom"]}
+Pie { size: undefined, sauce: undefined, cheese: undefined, toppingAdd: ["bronto", "deepmushroom"]}
 
 Test 4
 Test: It should add the sauce choice specified to the Pie object
@@ -58,7 +58,15 @@ Code:
 let myPie = new Pie();
 myPie.addSauce("medium");
 Expected Output:
-Pie { { size: undefined, sauce: medium, topping1: undefined, topping2: undefined, toppingAdd:}
+Pie { size: undefined, sauce: medium, cheese: undefined, toppingAdd: undefined}
+
+Test 5
+Test: It should add cheese choice to the Pie object
+Code:
+let myPie = new Pie();
+myPie.addCheese("ricotta");
+Expected Output:
+Pie { size: undefined, sauce: undefined, cheese: undefined, toppingAdd: undefined}
 
 ## Known Bugs
 
