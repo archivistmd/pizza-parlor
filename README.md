@@ -58,7 +58,7 @@ Code:
 let myPie = new Pie();
 myPie.addSauce("medium");
 Expected Output:
-Pie { size: undefined, sauce: medium, cheese: undefined, toppingAdd: undefined}
+Pie { size: undefined, sauce: "medium", cheese: undefined, toppingAdd: undefined}
 
 Test 5
 Test: It should add cheese choice to the Pie object
@@ -66,7 +66,7 @@ Code:
 let myPie = new Pie();
 myPie.addCheese("ricotta");
 Expected Output:
-Pie { size: undefined, sauce: undefined, cheese: ricotta, toppingAdd: undefined}
+Pie { size: undefined, sauce: undefined, cheese: "ricotta", toppingAdd: undefined}
 
 Test 6
 Test: It will add specified size in the correct property to the Pie object.
@@ -74,9 +74,15 @@ Code:
 let myPie = new Pie();
 myPie.addSize("personal");
 Expected Output:
-Pie { size: undefined, sauce: personal, cheese: undefined, toppingAdd: undefined}
+Pie { size: "personal", sauce: undefined, cheese: undefined, toppingAdd: undefined}
 
-
+Test 7
+Test: It will add the price to the specified size in the correct property to the Pie object.
+Code:
+let myPie = new Pie();
+myPie.addSize("personal");
+Expected Output:
+Pie { size: "personal", size cost: "5$", sauce: undefined, cheese: undefined, toppingAdd: []}
 
 ## Known Bugs
 
