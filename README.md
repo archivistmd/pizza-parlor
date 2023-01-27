@@ -52,6 +52,14 @@ myPie.addToppings("bronto", "deepmushroom");
 Expected Output:
 Pie { size: undefined, sauce: undefined, topping1: undefined, topping2: undefined, toppingAdd: ["bronto", "deepmushroom"]}
 
+Test 4
+Test: It should add the sauce choice specified to the Pie object
+Code:
+let myPie = new Pie();
+myPie.addSauce("medium");
+Expected Output:
+Pie { { size: undefined, sauce: medium, topping1: undefined, topping2: undefined, toppingAdd:}
+
 ## Known Bugs
 
 * Results not showing

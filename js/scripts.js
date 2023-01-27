@@ -7,6 +7,10 @@ function Pie(size, sauce, topping1, topping2, toppingAdd) {
   this.toppingAdd = toppingAdd;
 }
 
+Pie.prototype.addSauce = function(sauced) {
+  this.sauce = sauced;
+}
+
 Pie.prototype.addToppings = function(toppings1, toppings2) {
   let allToppings = [];
   allToppings.push(toppings1); 
