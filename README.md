@@ -93,6 +93,15 @@ myPie;
 Expected Outcome:
 Pie { size: undefined, size cost: 0, sauce: undefined, cheese: undefined, toppingAdd: ["wyvern"], toppingCost: 2 }
 
+Test 9
+Test: It should add the size cost to the topping cost and return the total cost to the Pie object.
+Code:
+let myPie = new Pie();
+myPie.addSize("dragon");
+myPie.addToppings("dragon");
+myPie.calculateCostTotal();
+Expected Output: 37
+
 ## Known Bugs
 
 * Results not showing
