@@ -6,13 +6,131 @@
   <script href="js/scripts.js"></script>
 </head>
 <body>
-  <h1>Toppings-R-Us Menu</h1>
+  <h1>Wilds of Thedas Pizza Menu</h1>
   <div id="instructions">
-    <p>Welcome to Toppings-R-Us online menu! Are you ready to place an order? Well, we're ready to get cooking! What would you like on your pizza?</p>
+    <p>Welcome to Toppings-R-Us online menu! Where we give you a variety of toppings from all across Thedas. Are you ready to place an order? Well, we're ready to get cooking! What would you like on your pizza?</p>
   </div>
   <br><br>
-  <form id="forms">
-
+  <form id="pizza-order">
+    <label>Size: </label>
+    <select id="size">
+      <option value="personal">Personal Pie- 7"</option>
+      <option value="small">Small Pie - 10"</option>
+      <option value="medium">Medium Pie - 12"</option>
+      <option value="large">Large Pie = 14"</option>
+      <option value="xlarge">X-Large Pie - 16"</option>
+      <option value="xxlarge">Dragon Pie - 24"</option>
+    </select>
+    <br><br>
+    <label>Sauce: </label>
+    <select id="sauce">
+      <option value="none">No sauce</option>
+      <option value="light">Light sauce</option>
+      <option value="regular">Regular sauce</option>
+      <option value="Extra">Extra sauce</option>
+      <option value="side">Sauce on the side</option>
+    </select>
+    <br><br>
+    <h3>Pick one protien and/or one veggie topping!</h3>
+    <p><strong>Protien:</strong></p>
+    <select id="topping1">
+      <option value="empty">--</option>
+      <option value="bronto">Bronto</option>
+      <option value="chicken">Chicken</option>
+      <option value="deepstalker">Deepstalker</option>
+      <option value="dragon">Dragon</option>
+      <option value="nug">Nug</option>
+      <option value="pheonix">Pheonix</option>
+      <option value="sausage">Sausage (pork)</option>
+      <option value="wanhill">Wandering Hills</option>
+      <option value="wyvern">Wyvern</option>
+    </select>
+    <br>
+    <p><strong>Veggie:</strong></p>
+    <select id="topping1">
+      <option value="empty">--</option>
+      <option value="artichoke">Artichoke</option>
+      <option value="deepmushroom">Deep Mushroom</option>
+      <option value="garlic">Garlic</option>
+      <option value="olives">Olives</option>
+      <option value="onion">Onion</option>
+      <option value="peppers">Peppers</option>
+      <option value="spinach">Spinach</option>
+      <option value="tomatoes">Tomatoes</option>
+    </select>
+    <br><br>
+    <h3>Additional Toppings +2$</h3>
+    <h4>Protiens</h4>
+    <label>
+    <input type="checkbox" name="topping-add" value="bronto">Bronto
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="chicken">Chicken
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="deepstalker">Deepstalker
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="dragon">Dragon
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="nug">Nug
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="pheonix">Pheonix
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="sausage">Sausage (pork)
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="wanhill">Wandering Hills
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="wyvern">Wyvern
+    </label>
+    <br>
+    <h4>Veggies</h4>  
+    <label>
+    <input type="checkbox" name="topping-add" value="artichoke">Artichoke
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="deepmushroom">Deep Mushroom
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="garlic">Garlic
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="olives">Olives
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="onion">Onion
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="pepper">Peppers
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="spinach">Spinach
+    </label>
+    <br>
+    <label>
+    <input type="checkbox" name="topping-add" value="tomatoes">Tomatoes
+    </label>
+    <br><br><br>
+    <button type="submit">Total Please!</button>
   </form>
 </body>
 </html>
