@@ -1,12 +1,12 @@
 //business logic
-function Pie(size, sauce, cheese, toppingAdd) {
+function Pie() {
   this.size = undefined;
   this.sizeCost = 0;
   this.sauce = undefined;
   this.cheese = undefined;
   this.toppingAdd = [];
   this.toppingCost = 0;
-  this.totalCost = 0;
+  this.costTotal = 0;
 }
 
 Pie.prototype.addSize = function(sizeSelect) {
@@ -39,7 +39,7 @@ Pie.prototype.addToppings = function(toppings) {
   this.toppingCost += 2;
 }
 
-Pie.prototype.calcuclateCostTotal = function() {
+Pie.prototype.calculateCostTotal = function() {
   let total = this.sizeCost + this.toppingCost
   return total;
 }
