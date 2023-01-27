@@ -5,6 +5,7 @@ function Pie(size, sauce, cheese, toppingAdd) {
   this.sauce = undefined;
   this.cheese = undefined;
   this.toppingAdd = [];
+  this.toppingCost = 0;
 }
 
 Pie.prototype.addSize = function(sizeSelect) {
@@ -32,10 +33,15 @@ Pie.prototype.addCheese = function(cheeseMe) {
   this.cheese = cheeseMe;
 }
 
-Pie.prototype.addToppings = function(toppings1, toppings2) {
-  let allToppings = [];
-  allToppings.push(toppings1); 
-  allToppings.push(toppings2);
-  this.toppingAdd = allToppings; 
+Pie.prototype.addToppings = function(toppings) {
+  this.toppingAdd.push(toppings);
+  this.toppingCost += 2;
 }
+
+Pie.prototype.calculateToppingCost = function() {
+  this.toppings.forEach()
+}
+
+
+
 //user logic

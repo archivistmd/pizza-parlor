@@ -84,6 +84,15 @@ myPie.addSize("personal");
 Expected Output:
 Pie { size: "personal", size cost: "5$", sauce: undefined, cheese: undefined, toppingAdd: []}
 
+Test 8
+Test: It will update Pie.prototype.addToppings to apply the cost of toppings by 2 for the Pie object in the correct property.
+Code:
+let myPie = new Pie();
+myPie.addToppings("wyvern");
+myPie;
+Expected Outcome:
+Pie { size: undefined, size cost: 0, sauce: undefined, cheese: undefined, toppingAdd: ["wyvern"], toppingCost: 2 }
+
 ## Known Bugs
 
 * Results not showing
