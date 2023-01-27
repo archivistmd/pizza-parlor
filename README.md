@@ -44,6 +44,14 @@ myPie.addToppings("bronto");
 Expected Output: Pie
 { size: undefined, sauce: undefined, topping1: undefined, topping2: undefined, toppingAdd: "bronto" }
 
+Test 3
+Test: It will add multiple toppings to the correct property of the Pie object as specified.
+Code:
+let myPie = new Pie();
+myPie.addToppings("bronto", "deepmushroom");
+Expected Output:
+Pie { size: undefined, sauce: undefined, topping1: undefined, topping2: undefined, toppingAdd: ["bronto", "deepmushroom"]}
+
 ## Known Bugs
 
 * Results not showing
