@@ -46,43 +46,28 @@ Pie.prototype.calculateTotalCost = function() {
 //user logic
 function getResults (event) {
   event.preventDefault();
-  hideResults();
-  
-  const pie = new Pie();
+
+  const paragraph = document.createElement("p");
+  const h2 = document.createElement("h2");
   const size = document.getElementById("size").value;
   const sauce = document.getElementById("sauce").value;
   const cheese = document.getElementById("cheese").value;
-  pie.addSize(size);
-  pie.addSauce(sauce);
-  pie.addCheese(cheese);
+  let toppingAdd = document.querySelectorAll("input[name=toppingAdd]:checked");
+  let toppingArray = Array.from(toppingAdd);
 
-  const toppingAdd = document.querySelectorAll("input[name=toppingAdd]:checked");
-  const toppingAddArray = Array.from(toppingAdd);
-  const theToppers = document.createElement("p");
-  toppingAddArray.forEach(function(toppings) {
-    pie.addToppingAdd(toppings);
-    theToppers.append(toppings.value + ". ")
+  const toppings = [];
+  toppingArray.forEach(function(element) {
+    toppings.push(element.value);
   });
 
-  const div = document.getElementById("order-check");
-  const displayTotal = document.createElement("h4");
-  const pickedSize = document.createElement("p");
-  const pickedSauced = document.createElement("p");
-  const pickedCheesed = document.createElement("p");
-  const total = pizza.calculateTotalCost();
+  let pie = new Pie(size, sauce, cheese, toppingAdd);
   
-  pickedSize.append("Size: " + pie.size);
-  pickedSauced.append("Sauced: " + pie.sauce);
-  pickedCheesed.append("Cheesed: " + pie.cheese)
-  displayTotal.append("This rings you up at: $" + total);
-  div.append(pickedSize);
-  div.append(pickedSauced);
-  div.append(pickedCheesed);
-  div.append(displayTotal);
-  div.removeAttribute("class");
+  h3.append("Order Check!");
+  paragraph.append('This rings you up at: ${pizzaOrder.getCost()}. Enjoy!);
+  document.body.append(h2,paragraph);
   }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   const form = documument.querySelector("form#pizza-order");
   form.addEventListener("submit", getResults);
   console.log(button);
