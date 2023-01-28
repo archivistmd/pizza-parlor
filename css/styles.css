@@ -4,13 +4,32 @@
 
 body {
   background-color: rgba(192, 191, 189, 0.897);
+  font-family: 'Times New Roman';
 }
+
 h1 {
   text-align: center;
   color: darkred;
   font-size: 64px;
+  font-family: 'Trebuchet MS';
 }
+
+h3 {
+  font-family: 'Courier New';
+}
+
+h4 {
+  font-family: Courier;
+}
+
 #instructions {
   font-size: 16px;
+  font-weight: 500;
   text-align: center;
+}
+
+#submit-button {
+  font-family: 'Times New Roman';
+  background-color: rgba(83, 0, 0, 0.558);
+  color: bisque;
 }
