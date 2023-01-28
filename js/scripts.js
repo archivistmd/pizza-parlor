@@ -63,7 +63,7 @@ function getResults (event) {
   let pie = new Pie(size, sauce, cheese, toppingAdd);
   
   h3.append("Order Check!");
-  paragraph.append('This rings you up at: ${pizzaOrder.getCost()}. Enjoy!);
+  paragraph.append("This rings you up at: ${pizzaOrder.getCost()}. Enjoy!");
   document.body.append(h2,paragraph);
   }
 
