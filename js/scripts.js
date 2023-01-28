@@ -1,5 +1,5 @@
 //business logic
-function Pie() {
+function Pie(size, sauce, cheese, toppingAdd) {
   this.size = undefined;
   this.sizeCost = 0;
   this.sauce = undefined;
@@ -44,8 +44,10 @@ Pie.prototype.calculateTotalCost = function() {
 }
 
 //user logic
-function handleFormSubmission(event) {
+function getResults (event) {
   event.preventDefault();
+  hideResults();
+  
   const pie = new Pie();
   const size = document.getElementById("size").value;
   const sauce = document.getElementById("sauce").value;
@@ -78,9 +80,10 @@ function handleFormSubmission(event) {
   div.append(pickedCheesed);
   div.append(displayTotal);
   div.removeAttribute("class");
-  document.getElementById("pizza-order").reset();
   }
 
 window.addEventListener("load", function() {
-  documument.querySelector("form#pizza-order").addEventListener("submit", handleFormSubmission);
+  const form = documument.querySelector("form#pizza-order");
+  form.addEventListener("submit", getResults);
+  console.log(button);
 });

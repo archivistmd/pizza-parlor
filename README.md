@@ -105,6 +105,7 @@ Expected Output: 37
 ## Known Bugs
 
 * Results not showing
+* Submission button refreshing the page instead of showing the results.
 
 ## License
 
