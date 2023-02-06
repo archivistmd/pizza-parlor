@@ -1,5 +1,5 @@
 //business logic
-function Pie(size, sauce, cheese, toppingAdd) {
+function Pie(size, sauce, cheese) {
   this.size = undefined;
   this.sizeCost = 0;
   this.sauce = undefined;
@@ -60,15 +60,14 @@ function getResults (event) {
     toppings.push(element.value);
   });
 
-  let pie = new Pie(size, sauce, cheese, toppingAdd);
+  let pizzaOrder = new Pie(size, sauce, cheese, toppingAdd);
   
-  h3.append("Order Check!");
-  paragraph.append("This rings you up at: ${pizzaOrder.getCost()}. Enjoy!");
+  h3.append('Order Check!');
+  paragraph.append(`This rings you up at: ${pizzaOrder.calculateTotalCost()}. Enjoy!`);
   document.body.append(h2,paragraph);
   }
 
 window.addEventListener("load", function () {
-  const form = documument.querySelector("form#pizza-order");
+  const form = document.querySelector("form#pizza-order");
   form.addEventListener("submit", getResults);
-  console.log(button);
 });
