@@ -62,7 +62,7 @@ function getResults (event) {
 
   let pizzaOrder = new Pie(size, sauce, cheese, toppingAdd);
   
-  h3.append('Order Check!');
+  h2.append('Order Check!');
   paragraph.append(`This rings you up at: ${pizzaOrder.calculateTotalCost()}. Enjoy!`);
   document.body.append(h2,paragraph);
   }
