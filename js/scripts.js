@@ -68,6 +68,6 @@ function getResults (event) {
   }
 
 window.addEventListener("load", function () {
-  const form = document.querySelector("form#pizza-order");
+  const form = document.querySelector("form");
   form.addEventListener("submit", getResults);
 });
